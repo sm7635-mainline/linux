@@ -110,7 +110,9 @@
 };
 
 &tlmm {
-	status = "disabled";
+	/* 27-30: Fingerprint reader (SPI) */
+	gpio-reserved-ranges = <13 1>, <27 4>, <63 2>;
+
 	/*
 		GPIO143 - ics_haptic_rst
 	*/

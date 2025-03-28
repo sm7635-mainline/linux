@@ -1036,6 +1036,19 @@ config DRM_PANEL_VISIONOX_VTDR6130
 	  Say Y here if you want to enable support for Visionox
 	  VTDR6130 1080x2400 AMOLED DSI panel.
 
+config CONFIG_DRM_PANEL_VXN_RM69220
+	tristate "VXN RM69220"
+	depends on OF
+	depends on DRM_MIPI_DSI
+	depends on BACKLIGHT_CLASS_DEVICE
+	select DRM_DISPLAY_DSC_HELPER
+	select DRM_DISPLAY_HELPER
+	select VIDEOMODE_HELPERS
+	help
+	  Say Y here if you want to enable support for VXN RM69220 amoled display
+	  panels, such as the one found in the Nothing Phone (3a) / (3a) pro
+	  smartphone.
+
 config DRM_PANEL_WIDECHIPS_WS2401
 	tristate "Widechips WS2401 DPI panel driver"
 	depends on SPI && GPIOLIB
